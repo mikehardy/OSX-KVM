@@ -7,6 +7,8 @@
 # The "media=cdrom" part is needed to make Clover recognize the bootable ISO
 # image.
 
+sudo /home/mike/work/OSX-KVM/start-networking.sh
+
 ############################################################################
 # NOTE: Tweak the "MY_OPTIONS" line in case you are having booting problems!
 ############################################################################
