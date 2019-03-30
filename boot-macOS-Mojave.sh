@@ -15,9 +15,9 @@ sudo /home/mike/work/OSX-KVM/start-networking.sh
 
 MY_OPTIONS="+pcid,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check"
 
-qemu-system-x86_64 -enable-kvm -m 4096 -cpu Penryn,kvm=on,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,$MY_OPTIONS\
+qemu-system-x86_64 -enable-kvm -m 6144 -cpu Penryn,kvm=on,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,$MY_OPTIONS\
 	  -machine pc-q35-2.11 \
-	  -smp 8,cores=4,threads=2 \
+	  -smp $(nproc) \
 	  -usb -device usb-kbd -device usb-tablet \
 	  -device isa-applesmc,osk="ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc" \
 	  -drive if=pflash,format=raw,readonly,file=/home/mike/work/OSX-KVM/OVMF_CODE.fd \
