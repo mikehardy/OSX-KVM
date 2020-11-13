@@ -133,7 +133,8 @@ Phenom II X3 720 does not. Ryzen processors work just fine.
   Note: Modern NVIDIA GPUs are supported on HighSierra but not on later
   versions.
 
-* Convert the downloaded `BaseSystem.dmg` file into the `BaseSystem.img` file.
+* Convert the downloaded (or the extracted) `BaseSystem.dmg` file into the
+  `BaseSystem.img` file.
 
   ```
   qemu-img convert BaseSystem.dmg -O raw BaseSystem.img
